@@ -1,0 +1,873 @@
+/* =========================================================
+   NAVBAR - PREMIUM DARK THEME
+========================================================= */
+
+.nav {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: min(calc(100% - 36px), 1220px);
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 22px;
+
+  background: rgba(7, 11, 20, 0.84);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+
+  z-index: 1000;
+
+  transition:
+    top 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.nav.scrolled {
+  top: 10px;
+
+  background: rgba(7, 11, 20, 0.96);
+
+  border-color: rgba(66, 199, 255, 0.14);
+
+  box-shadow:
+    0 14px 45px rgba(0, 0, 0, 0.32),
+    0 0 30px rgba(66, 199, 255, 0.025);
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+  flex-shrink: 0;
+
+  color: #f7fbff;
+
+  font-size: 22px;
+  font-weight: 800;
+
+  letter-spacing: -0.05em;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.brand span {
+  color: #42c7ff;
+}
+
+.brand:hover {
+  color: #42c7ff;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.desktop-links {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.desktop-links button,
+.desktop-links a {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #91a1b6;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.desktop-links button::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -7px;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: #42c7ff;
+
+  transform: translateX(-50%);
+
+  transition: width 0.2s ease;
+}
+
+.desktop-links button:hover,
+.desktop-links a:hover {
+  color: #f7fbff;
+  transform: translateY(-1px);
+}
+
+.desktop-links button:hover::after {
+  width: 14px;
+}
+
+
+/* =========================================================
+   DESKTOP SOCIAL ICONS
+========================================================= */
+
+.desktop-links .social-link {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 8px;
+
+  color: #91a1b6;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.desktop-links .social-link:hover {
+  color: #42c7ff;
+
+  background: rgba(66, 199, 255, 0.07);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   BURGER BUTTON
+========================================================= */
+
+.menu-button {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  color: #f7fbff;
+
+  cursor: pointer;
+
+  position: relative;
+  z-index: 1100;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.menu-button:hover {
+  color: #42c7ff;
+
+  background: rgba(66, 199, 255, 0.08);
+
+  border-color: rgba(66, 199, 255, 0.25);
+
+  box-shadow:
+    0 0 18px rgba(66, 199, 255, 0.08);
+}
+
+.menu-button:active {
+  transform: scale(0.93);
+}
+
+
+/* =========================================================
+   MOBILE BACKDROP
+========================================================= */
+
+.mobile-menu-backdrop {
+  display: none;
+}
+
+
+/* =========================================================
+   MOBILE NAV
+========================================================= */
+
+.mobile-nav {
+  display: none;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+  /* -------------------------------------------------------
+     MAIN NAVBAR
+  ------------------------------------------------------- */
+
+  .nav {
+    top: 10px;
+
+    width: calc(100% - 20px);
+    height: 58px;
+
+    padding: 0 14px;
+
+    border-radius: 13px;
+
+    background: rgba(7, 11, 20, 0.91);
+
+    border-color: rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+      0 10px 35px rgba(0, 0, 0, 0.25);
+  }
+
+  .nav.scrolled {
+    top: 7px;
+
+    background: rgba(7, 11, 20, 0.97);
+
+    border-color: rgba(66, 199, 255, 0.16);
+
+    box-shadow:
+      0 14px 40px rgba(0, 0, 0, 0.4),
+      0 0 25px rgba(66, 199, 255, 0.025);
+  }
+
+
+  /* -------------------------------------------------------
+     BRAND
+  ------------------------------------------------------- */
+
+  .brand {
+    font-size: 21px;
+  }
+
+
+  /* -------------------------------------------------------
+     HIDE DESKTOP LINKS
+  ------------------------------------------------------- */
+
+  .desktop-links {
+    display: none !important;
+  }
+
+
+  /* -------------------------------------------------------
+     BURGER
+  ------------------------------------------------------- */
+
+  .menu-button {
+    display: flex;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+
+  /* =======================================================
+     BACKDROP
+  ======================================================= */
+
+  .mobile-menu-backdrop {
+    display: block;
+
+    position: fixed;
+    inset: 0;
+
+    background:
+      rgba(2, 6, 14, 0.68);
+
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+
+    z-index: 900;
+  }
+
+
+  /* =======================================================
+     MOBILE MENU CONTAINER
+  ======================================================= */
+
+  .mobile-nav {
+    position: fixed;
+
+    display: flex;
+    flex-direction: column;
+
+    top: 76px;
+    left: 10px;
+    right: 10px;
+
+    max-height: calc(100vh - 92px);
+
+    padding: 10px;
+
+    overflow-y: auto;
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(13, 22, 38, 0.99),
+        rgba(7, 13, 24, 0.99)
+      );
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+
+    border-radius: 18px;
+
+    box-shadow:
+      0 30px 80px rgba(0, 0, 0, 0.58),
+      0 0 45px rgba(66, 199, 255, 0.035);
+
+    z-index: 1050;
+
+    scrollbar-width: thin;
+    scrollbar-color: rgba(66, 199, 255, 0.25) transparent;
+  }
+
+
+  /* =======================================================
+     MOBILE NAV HEADER
+  ======================================================= */
+
+  .mobile-nav-header {
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 10px 0 13px;
+
+    border-bottom:
+      1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .mobile-nav-header span {
+    color: #f7fbff;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+
+  .mobile-nav-header span::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 6px;
+    height: 6px;
+
+    margin-right: 8px;
+
+    border-radius: 50%;
+
+    background: #42c7ff;
+
+    box-shadow:
+      0 0 10px rgba(66, 199, 255, 0.7);
+  }
+
+  .mobile-nav-header button {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    color: #91a1b6;
+
+    cursor: pointer;
+
+    transition:
+      color 0.2s ease,
+      background 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .mobile-nav-header button:hover {
+    color: #42c7ff;
+
+    background: rgba(66, 199, 255, 0.08);
+
+    border-color: rgba(66, 199, 255, 0.2);
+
+    transform: rotate(90deg);
+  }
+
+
+  /* =======================================================
+     MOBILE LINKS CONTAINER
+  ======================================================= */
+
+  .mobile-nav-links {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 5px;
+  }
+
+
+  /* =======================================================
+     MOBILE LINK BUTTONS
+  ======================================================= */
+
+  .mobile-nav-links button {
+    position: relative;
+
+    width: 100%;
+    min-height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 13px;
+
+    border: 0;
+    border-bottom:
+      1px solid rgba(255, 255, 255, 0.055);
+
+    outline: 0;
+
+    background: transparent;
+
+    color: #9aaabd;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+      color 0.2s ease,
+      background 0.2s ease,
+      padding-left 0.2s ease;
+  }
+
+  .mobile-nav-links button:last-child {
+    border-bottom: 0;
+  }
+
+
+  /* LEFT ACCENT */
+
+  .mobile-nav-links button::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    width: 2px;
+    height: 0;
+
+    border-radius: 10px;
+
+    background: #42c7ff;
+
+    box-shadow:
+      0 0 12px rgba(66, 199, 255, 0.7);
+
+    transition: height 0.2s ease;
+  }
+
+
+  /* HOVER */
+
+  .mobile-nav-links button:hover,
+  .mobile-nav-links button:focus-visible {
+    color: #f7fbff;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(66, 199, 255, 0.09),
+        rgba(66, 199, 255, 0.025),
+        transparent
+      );
+
+    padding-left: 18px;
+  }
+
+  .mobile-nav-links button:hover::before,
+  .mobile-nav-links button:focus-visible::before {
+    height: 22px;
+  }
+
+
+  /* =======================================================
+     MOBILE ARROW
+  ======================================================= */
+
+  .mobile-arrow {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    color: #607188;
+
+    font-size: 14px;
+
+    transition:
+      color 0.2s ease,
+      background 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .mobile-nav-links button:hover .mobile-arrow {
+    color: #42c7ff;
+
+    background: rgba(66, 199, 255, 0.08);
+
+    border-color: rgba(66, 199, 255, 0.18);
+
+    transform: translate(2px, -2px);
+  }
+
+
+  /* =======================================================
+     SOCIAL SECTION
+  ======================================================= */
+
+  .mobile-socials {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 9px;
+
+    margin-top: 8px;
+    padding-top: 14px;
+
+    border-top:
+      1px solid rgba(255, 255, 255, 0.07);
+  }
+
+
+  /* =======================================================
+     SOCIAL BUTTON
+  ======================================================= */
+
+  .mobile-socials a {
+    min-height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border:
+      1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 10px;
+
+    background:
+      rgba(255, 255, 255, 0.025);
+
+    color: #91a1b6;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition:
+      color 0.2s ease,
+      background 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .mobile-socials a:hover {
+    color: #f7fbff;
+
+    background:
+      rgba(66, 199, 255, 0.08);
+
+    border-color:
+      rgba(66, 199, 255, 0.2);
+
+    box-shadow:
+      0 8px 25px rgba(0, 0, 0, 0.18);
+
+    transform: translateY(-2px);
+  }
+
+  .mobile-socials a svg {
+    color: #42c7ff;
+
+    transition:
+      transform 0.2s ease;
+  }
+
+  .mobile-socials a:hover svg {
+    transform: scale(1.08);
+  }
+
+
+  /* =======================================================
+     MOBILE SCROLLBAR
+  ======================================================= */
+
+  .mobile-nav::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .mobile-nav::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .mobile-nav::-webkit-scrollbar-thumb {
+    background: rgba(66, 199, 255, 0.25);
+    border-radius: 10px;
+  }
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (min-width: 761px) and (max-width: 1050px) {
+
+  .nav {
+    width: calc(100% - 28px);
+
+    padding: 0 18px;
+  }
+
+  .desktop-links {
+    gap: 15px;
+  }
+
+  .desktop-links button,
+  .desktop-links a {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .nav {
+    width: calc(100% - 16px);
+
+    height: 56px;
+
+    padding: 0 12px;
+
+    border-radius: 12px;
+  }
+
+  .nav.scrolled {
+    top: 6px;
+  }
+
+  .brand {
+    font-size: 20px;
+  }
+
+  .menu-button {
+    width: 39px;
+    height: 39px;
+  }
+
+  .mobile-nav {
+    top: 70px;
+
+    left: 8px;
+    right: 8px;
+
+    max-height: calc(100vh - 82px);
+
+    padding: 8px;
+
+    border-radius: 16px;
+  }
+
+  .mobile-nav-header {
+    min-height: 46px;
+  }
+
+  .mobile-nav-links button {
+    min-height: 48px;
+
+    font-size: 13.5px;
+  }
+
+  .mobile-socials a {
+    min-height: 43px;
+
+    font-size: 11.5px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .nav {
+    width: calc(100% - 12px);
+
+    padding: 0 10px;
+  }
+
+  .brand {
+    font-size: 19px;
+  }
+
+  .menu-button {
+    width: 38px;
+    height: 38px;
+  }
+
+  .mobile-nav {
+    left: 6px;
+    right: 6px;
+
+    padding: 7px;
+  }
+
+  .mobile-nav-links button {
+    min-height: 46px;
+
+    padding-left: 11px;
+    padding-right: 10px;
+
+    font-size: 13px;
+  }
+
+  .mobile-nav-links button:hover {
+    padding-left: 16px;
+  }
+
+  .mobile-arrow {
+    width: 26px;
+    height: 26px;
+  }
+
+  .mobile-socials {
+    gap: 7px;
+  }
+
+  .mobile-socials a {
+    min-height: 41px;
+
+    gap: 6px;
+
+    font-size: 10.5px;
+  }
+}
+
+
+/* =========================================================
+   REDUCE MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .nav,
+  .brand,
+  .desktop-links button,
+  .desktop-links a,
+  .menu-button,
+  .mobile-nav-links button,
+  .mobile-arrow,
+  .mobile-socials a,
+  .mobile-nav-header button {
+    transition: none;
+  }
+}
