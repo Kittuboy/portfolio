@@ -31,7 +31,7 @@ import {
 import Navbar from "./Navbar";
 import { api } from "./services/api";
 
-import "./Portfolio.css";
+import "./portfolio.css";
 
 const fallback = {
     name: "Vikas Ranjave",
